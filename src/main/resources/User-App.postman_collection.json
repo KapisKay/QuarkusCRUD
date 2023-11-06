@@ -1,0 +1,247 @@
+{
+	"info": {
+		"_postman_id": "0f4c66ce-06bf-40ea-88c7-cfee5e588a1c",
+		"name": "User-App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18509466"
+	},
+	"item": [
+		{
+			"name": "Create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"Maya\",\r\n    \"lastName\":\"Luu\",\r\n    \"email\": \"luu@gmail.com\",\r\n    \"birthday\": \"20-01-2004\",\r\n    \"password\":\"trialpass\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7070/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get  All Users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7070/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7070/api/v1/users/f233654c-8495-469c-b275-af413bf7b0b7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"f233654c-8495-469c-b275-af413bf7b0b7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User by Email",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7070/api/v1/users/email/luu@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"email",
+						"luu@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"Sell\",\r\n    \"lastName\":\"Oat\",\r\n    \"birthday\": \"13-05-2003\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7070/api/v1/users/f233654c-8495-469c-b275-af413bf7b0b7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"f233654c-8495-469c-b275-af413bf7b0b7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User Email",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"oriley@gmail.com\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7070/api/v1/users/reset-email/f233654c-8495-469c-b275-af413bf7b0b7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"reset-email",
+						"f233654c-8495-469c-b275-af413bf7b0b7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset User Password",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"currentPassword\":\"trialpass\",\r\n    \"newPassword\":\"filll2346\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7070/api/v1/users/reset-password/fab17c46-abce-4057-b9dc-682c3324c9e5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"reset-password",
+						"fab17c46-abce-4057-b9dc-682c3324c9e5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7070/api/v1/users/0da9164d-642e-41fb-93c6-a73f40860eaf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"0da9164d-642e-41fb-93c6-a73f40860eaf"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
